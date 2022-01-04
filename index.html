@@ -20,7 +20,7 @@
     b.onclick = function () {
       let id = a.value;
       // https://weibo.com/l/wblive/m/show/1022:2321324720964213539537
-      let par = id.split("?");
+      let par = id.split("id=");
       if (par.length > 1) {
         var url = "https://weibo.com/l/pc/anchor/live?live_id=" + par[1]; //设置查询字符串 1022:2321324721619171148184
         location.href = url;
