@@ -1,38 +1,45 @@
 <!DOCTYPE html>
+<!-- saved from url=(0032)https://hugh888888.github.io/hl/ -->
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<body>
-  <textarea name="input" type="text" id="id" value="" style="width: 100%"></textarea>
-  <input name="submit" type="button" id="submit" value="确认" />
-   <input name="qk" type="button" id="qk" value="清空" />
-</body>
-<script>
-  window.onload = function () {
-    //页面初始化
-    var b = document.getElementById("submit");
-    var a = document.getElementById("id");
-    var qk = document.getElementById("qk");
-    b.onclick = function () {
-      let id = a.value;
-      // https://weibo.com/l/wblive/m/show/1022:2321324720964213539537
-      let par = id.split("id=");
-      if (par.length > 1) {
-        var url = "https://weibo.com/l/pc/anchor/live?live_id=" + par[1]; //设置查询字符串 1022:2321324721619171148184
-        location.href = url;
-      }
-    };
-    
-    qk.onclick = function () {
-      b.value('')
-    }
-  };
-</script>
+  <body>
+    <textarea
+      name="input"
+      type="text"
+      id="id"
+      value=""
+      style="width: 100%"
+    ></textarea>
+    <input name="submit" type="button" id="submit" value="确认" />
+    <input name="qk" type="button" id="qk" value="清空" />
 
+    <script>
+      window.onload = function () {
+        //页面初始化
+        var b = document.getElementById("submit");
+        var a = document.getElementById("id");
+        var qk = document.getElementById("qk");
+        b.onclick = function () {
+          let id = a.value;
+          // https://weibo.com/l/wblive/m/show/1022:2321324720964213539537
+          let par = id.split("id=");
+          if (par.length > 1) {
+            var url = "https://weibo.com/l/pc/anchor/live?live_id=" + par[1]; //设置查询字符串 1022:2321324721619171148184
+            location.href = url;
+          }
+        };
+
+        qk.onclick = function () {
+          document.getElementById("id").value = "";
+        };
+      };
+    </script>
+  </body>
 </html>
