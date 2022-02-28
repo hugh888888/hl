@@ -11,12 +11,14 @@
 <body>
   <textarea name="input" type="text" id="id" value="" style="width: 100%"></textarea>
   <input name="submit" type="button" id="submit" value="确认" />
+   <input name="qk" type="button" id="qk" value="清空" />
 </body>
 <script>
   window.onload = function () {
     //页面初始化
     var b = document.getElementById("submit");
     var a = document.getElementById("id");
+    var qk = document.getElementById("qk");
     b.onclick = function () {
       let id = a.value;
       // https://weibo.com/l/wblive/m/show/1022:2321324720964213539537
@@ -26,6 +28,10 @@
         location.href = url;
       }
     };
+    
+    qk.onclick = function () {
+      b.value('')
+    }
   };
 </script>
 
